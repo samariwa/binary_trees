@@ -45,5 +45,6 @@ binary_tree_t *binary_tree_uncle(binary_tree_t *node);
 void binary_tree_print(const binary_tree_t *);
 size_t depth_increment(size_t level, const binary_tree_t *tree);
 size_t leaf_increment(size_t leaf_count, const binary_tree_t *tree);
-int binary_tree_postorder_h(const binary_tree_t *tree, int h);
+size_t left_branch(const binary_tree_t *tree);
+size_t right_branch(const binary_tree_t *tree);
 #endif

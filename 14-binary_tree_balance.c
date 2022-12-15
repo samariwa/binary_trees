@@ -11,10 +11,36 @@ int binary_tree_balance(const binary_tree_t *tree)
 	if (tree == NULL)
 		return 0;
 
-	int leftHeight = binary_tree_height(tree->left);
-	int rightHeight = binary_tree_height(tree->right);
+	return (left_branch(tree) - right_branch(tree));
+}
 
-  	int balanceFactor = leftHeight - rightHeight;
+/**
+ * left_branch - returns the left-subtree's height
+ * @tree: pointer to start node
+ * Return: the height
+ */
+size_t left_branch(const binary_tree_t *tree)
+{
+	size_t height;
 
-	return balanceFactor;
+	if (tree == NULL)
+		return (0);
+	height = left_branch(tree->left);
+	return (height + 1);
+}
+
+
+/**
+ * right_branch - returns the right-subtree's height
+ * @tree: pointer to start node
+ * Return: the height
+ */
+size_t right_branch(const binary_tree_t *tree)
+{
+	size_t height;
+
+	if (tree == NULL)
+		return (0);
+	height = right_branch(tree->right);
+	return (height + 1);
 }
