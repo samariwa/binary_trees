@@ -6,7 +6,7 @@
  * nodes either have got no children or two of them
  * @tree: a pointer to the root node of the tree to check
  *
- * return: 1 if tree is FULL else 0
+ * Return: 1 if tree is FULL else 0
  * description: If tree is NULL return 0
  * children of a tree root
  * must also be full for it to be full
@@ -14,6 +14,7 @@
 int binary_tree_is_full(const binary_tree_t *tree)
 {
 	int l, r;
+
 	if (tree != NULL)
 	{
 		if (tree->left == NULL && tree->right == NULL)

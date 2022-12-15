@@ -5,7 +5,7 @@
  * node of a given node
  * @node: the given node
  *
- * return: a pointer to the sibling node
+ * Return: a pointer to the sibling node
  *
  * description: if
  * - node is NULL

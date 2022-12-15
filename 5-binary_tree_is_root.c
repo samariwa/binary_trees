@@ -5,7 +5,7 @@
  * node is a root
  * @node: a pointer to the node to check
  *
- * return: 1 if node is a root, otherwise 0
+ * Return: 1 if node is a root, otherwise 0
  *
  * description: If node is NULL, return 0
  */
