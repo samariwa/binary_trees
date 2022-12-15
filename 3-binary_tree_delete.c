@@ -5,7 +5,7 @@
  * child nodes of a given node
  * @node: node to recursively delete
  *
- * return: 1 when done
+ * Return: 1 when done
  */
 int delete_node(binary_tree_t *node)
 {
