@@ -1,0 +1,30 @@
+#include "binary_trees.h"
+
+/**
+ * binary_tree_postorder - a function that goes through
+ * a binary tree using post-order traversal
+ * @tree: The current root node
+ * @func is a pointer to a function to call for each node.
+ * The value in the node must be passed as a parameter to
+ * this function.
+ *
+ */
+int binary_tree_postorder_h(const binary_tree_t *tree, int h)
+{
+	int l, r;
+	if (tree == NULL)
+		return (1);
+
+	if (tree->left != NULL)
+		l = binary_tree_postorder_h(tree->left, h);
+	if (tree->right != NULL)
+		r = binary_tree_postorder_h(tree->right, h);
+	if (l >= r)
+		return (l);
+	return (r);
+}
+
+size_t binary_tree_height(const binary_tree_t *tree)
+{
+	return binary_tree_postorder_h(tree, 1);
+}
